@@ -47,7 +47,7 @@ public class PlayerScore
     public String toString()
     {
         String result;
-        result = "Player Name: " + playerName + "\nPlayer Score: " + playerScore;
+        result = "Player Name: " + playerName + "\tPlayer Score: " + playerScore;
         return result;
     }        
     
