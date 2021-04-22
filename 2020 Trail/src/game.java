@@ -1,6 +1,5 @@
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 public class game
 {
@@ -14,13 +13,14 @@ public class game
     {
         Random rand = new Random();
         
+        //array that stores bad outcomes to be chosen at random 
         String[] badOutcome = {"You ran out of toilet paper.", 
                                "You wanted to fight quarantine boredom, but the PlayStation 5 was sold out.",
                                "You went hiking and were swarmed by murden hornets.",
                                "Your TikTok went viral -- for being so cringey.",
                                "The seed packets were for Audrey II. You've become plant food."};
         
-        String result = "";
+        //if you're score is less than 0, you get a random bad outcome
         if(score < 0)
         {
             int index = rand.nextInt(badOutcome.length);
@@ -55,6 +55,36 @@ public class game
        return listOfPlayers; 
     }
     
+    //Trying to get this to sort my arraylist by score
+     public static void sort(ArrayList<PlayerScore> listOfPlayers)
+    {
+  
+              //  listOfPlayers.sort((o1, o2) -> o1.getScore().compareTo(o2.getScore()));
+        
+        //prints out list to see if it is sorted
+        for(PlayerScore i : listOfPlayers)
+        {
+            System.out.println(i);
+        }
+              
+    }
+     
+     //accepts the score at the end of the game and uses it to create a new object
+    //to store the player's name and score to later display
+    //like an old arcade game
+    public static PlayerScore newPlayer(int score)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Please enter your name: ");
+        String name = scan.nextLine();
+        
+        PlayerScore player = new PlayerScore(name, score);
+        
+        return player;
+    }
+    
+    
     //method to display high score at the end of the game
     public void scoreDisplay(ArrayList<PlayerScore> listOfPlayers)
     {
@@ -66,6 +96,8 @@ public class game
         }
                 
     }
+    
+    
     
   
 }
