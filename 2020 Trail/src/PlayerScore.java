@@ -13,6 +13,12 @@ public class PlayerScore
      // Instance varibles
     private String playerName; 
     private int playerScore;
+     
+    public PlayerScore()
+    {
+          playerName = "";
+          playerScore = 0;
+    }
     
       //object that contains player's name and their score
     public PlayerScore (String name, int score)
