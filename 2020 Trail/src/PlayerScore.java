@@ -14,6 +14,7 @@ public class PlayerScore
     private String playerName; 
     private int playerScore;
      
+    //default constructor
     public PlayerScore()
     {
           playerName = "";
