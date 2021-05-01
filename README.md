@@ -1,6 +1,7 @@
 # C211_Surviving_2020
 Oregan Trail style quiz with a 2020 twist
 
+This version is broken. Final version can be found here: https://github.com/MaggieMHagan/Surviving-2020-C211-Red-Team 
 
 Image Sources
 
